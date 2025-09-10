@@ -1,10 +1,10 @@
-.services {
+.projects {
   padding: 5rem 5%;
   background-color: var(--section-bg);
   transition: var(--transition);
 }
 
-.services h2 {
+.projects h2 {
   text-align: center;
   margin-bottom: 3rem;
   color: var(--text);
@@ -13,7 +13,7 @@
   transition: var(--transition);
 }
 
-.services h2::after {
+.projects h2::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -24,7 +24,7 @@
   background-color: var(--accent);
 }
 
-.services-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -33,40 +33,48 @@
   transition: var(--transition);
 }
 
-.service-card {
+.project-card {
   background: var(--card-bg);
-  padding: 2rem;
   border-radius: var(--border-radius);
+  overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
-  text-align: center;
   border: 1px solid var(--border-color);
-  color: var(--text);
 }
 
-.service-card:hover {
+.project-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-card h3 {
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.project-info h3 {
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   transition: var(--transition);
 }
 
-.service-card p {
+.project-info p {
   color: var(--secondary-text);
-  line-height: 1.6;
+  text-decoration: none;
+  font-weight: 500;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  .services {
-    padding: 3rem 5%;
-  }
-  
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+.project-card a {
+  text-decoration: none;
+  color: inherit;
 }
