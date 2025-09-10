@@ -1,11 +1,14 @@
+/* -- SECTION CONTACT AMÉLIORÉE -- */
 .contact {
-  padding: 5rem 5%;
-  background-color: var(--section-bg);
+  padding: 6rem 5%;
+  background: var(--section-bg);
+  transition: var(--transition);
 }
 
 .contact h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
   color: var(--text);
   position: relative;
   padding-bottom: 1rem;
@@ -17,73 +20,134 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: var(--accent);
+  width: 100px;
+  height: 4px;
+  background-image: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  border-radius: 2px;
 }
 
 .contact-form {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-form {
+    gap: 1.5rem;
+  }
+  
+  .contact-form textarea {
+    min-height: 150px;
+  }
 }
 
 .form-group {
+  position: relative;
   width: 100%;
+}
+
+.contact-form label {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  color: var(--secondary-text);
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  background-color: var(--section-bg);
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid var(--border-color);
+  padding: 1rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
   background-color: var(--card-bg);
   color: var(--text);
-  border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
-  transition: var(--transition);
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: transparent;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.2);
+  outline: none;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.1);
-  background-color: var(--background);
-  color: var(--text);
+}
+
+.contact-form input:focus + label,
+.contact-form textarea:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--primary);
+  background-color: var(--card-bg);
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px var(--card-bg);
 }
 
 .contact-form textarea {
-  min-height: 150px;
+  min-height: 120px;
   resize: vertical;
 }
 
-.contact-form button {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: var(--accent);
-  color: var(--text-on-primary);
-  border: 2px solid var(--accent);
-  padding: 0.8rem 2rem;
+.contact-form .cta-button {
+  padding: 0.9rem 2rem;
+  border: none;
   border-radius: var(--border-radius);
-  cursor: pointer;
+  background-size: 200% auto;
+  background-image: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 50%, var(--primary) 100%);
+  color: var(--white);
+  font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
-  display: block;
-  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form button:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-  .contact {
-    padding: 3rem 5%;
-  }
+.contact-form .cta-button:hover {
+  background-position: right center;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }

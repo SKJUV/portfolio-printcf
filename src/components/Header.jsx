@@ -11,29 +11,36 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">
-        <h1>Mon Entreprise</h1>
+      <div className="logo-background">
+        <div className="logo-text">PRINTCF</div>
       </div>
       
-      <div className="header-actions">
+      <div className="header-content">
+        <div className="logo">
+          <h1>PRINTCF</h1>
+        </div>
         
-        <button 
-          className={`menu-btn ${isOpen ? 'open' : ''}`} 
-          onClick={toggleMenu}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className="header-actions">
+          <button 
+            className={`menu-btn ${isOpen ? 'open' : ''}`} 
+            onClick={toggleMenu}
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        
+        <nav className={`nav ${isOpen ? 'open' : ''}`}>
+          <a href="#accueil" onClick={() => setIsOpen(false)}>Accueil</a>
+          <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
+          <a href="#projects" onClick={() => setIsOpen(false)}>Projets</a>
+          <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
+        </nav>
+        
+        <ThemeSwitcher />
       </div>
-      
-      <nav className={`nav ${isOpen ? 'open' : ''}`}>
-        <a href="#accueil" onClick={() => setIsOpen(false)}>Accueil</a>
-        <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
-        <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
-        <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
-      </nav>
-      <ThemeSwitcher />
     </header>
   );
 };

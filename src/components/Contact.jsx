@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import '../styles/Contact.css';
+import '../styles/Contact.css'; // Assurez-vous que le chemin est correct
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    prenom: '', // Ajout du prénom
+    nom: '',    // Ajout du nom
     email: '',
     message: ''
   });
@@ -18,47 +19,72 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ici, vous pourriez ajouter la logique pour envoyer le formulaire
     console.log('Formulaire soumis :', formData);
     alert('Message envoyé avec succès !');
-    setFormData({ name: '', email: '', message: '' });
+    // Vider le formulaire après envoi
+    setFormData({ prenom: '', nom: '', email: '', message: '' });
   };
 
   return (
     <section id="contact" className="contact section">
       <h2>Contactez-nous</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <input
-            type="text"
-            name="name"
-            placeholder="Votre nom"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+      <form onSubmit={handleSubmit} className="contact-form" noValidate>
+        
+        {/* Ligne pour Prénom et Nom côte à côte sur desktop */}
+        <div className="form-row">
+          <div className="form-group">
+            <input
+              type="text"
+              id="prenom"
+              name="prenom"
+              value={formData.prenom}
+              onChange={handleChange}
+              placeholder=" " /* Important pour l'effet CSS */
+              required
+            />
+            <label htmlFor="prenom">Prénom</label>
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              value={formData.nom}
+              onChange={handleChange}
+              placeholder=" " /* Important pour l'effet CSS */
+              required
+            />
+            <label htmlFor="nom">Nom</label>
+          </div>
         </div>
+
         <div className="form-group">
           <input
             type="email"
+            id="email"
             name="email"
-            placeholder="Votre email"
             value={formData.email}
             onChange={handleChange}
+            placeholder=" " /* Important pour l'effet CSS */
             required
           />
+          <label htmlFor="email">Adresse Email</label>
         </div>
+        
         <div className="form-group">
           <textarea
+            id="message"
             name="message"
-            placeholder="Votre message"
             value={formData.message}
             onChange={handleChange}
+            placeholder=" " /* Important pour l'effet CSS */
             required
           ></textarea>
+          <label htmlFor="message">Votre Message</label>
         </div>
+        
         <button type="submit" className="cta-button">
-          Envoyer le message
+          Envoyer le Message
         </button>
       </form>
     </section>
