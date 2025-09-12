@@ -68,7 +68,7 @@ const Contact = () => {
             placeholder=" " /* Important pour l'effet CSS */
             required
           />
-          <label htmlFor="email">Adresse Email</label>
+          <label htmlFor="email">Email professionnel</label>
         </div>
         
         <div className="form-group">
@@ -80,11 +80,11 @@ const Contact = () => {
             placeholder=" " /* Important pour l'effet CSS */
             required
           ></textarea>
-          <label htmlFor="message">Votre Message</label>
+          <label htmlFor="message">Votre projet ou demande</label>
         </div>
         
         <button type="submit" className="cta-button">
-          Envoyer le Message
+          Envoyer la demande
         </button>
       </form>
     </section>

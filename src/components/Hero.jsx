@@ -17,7 +17,7 @@ const Hero = () => {
     <section id="accueil" className="hero">
       <div className="hero-content">
         <h1>Créons ensemble quelque chose d'extraordinaire</h1>
-        <p>Développeur passionné créant des expériences numériques uniques et performantes</p>
+        <p>Votre partenaire de confiance pour des solutions numériques innovantes et performantes</p>
         
         <div className="hero-cta">
           <button 
@@ -25,7 +25,7 @@ const Hero = () => {
             className="cta-button"
             aria-label="Voir mes projets"
           >
-            Voir mes projets
+            Découvrez nos réalisations
           </button>
           
           <button 
@@ -33,20 +33,9 @@ const Hero = () => {
             className="cta-button secondary"
             aria-label="Me contacter"
           >
-            Me contacter
+            Contactez-nous
           </button>
         </div>
-      </div>
-      
-      <div 
-        className="scroll-indicator" 
-        onClick={() => scrollToSection('about')}
-        onKeyDown={(e) => e.key === 'Enter' && scrollToSection('about')}
-        role="button"
-        tabIndex={0}
-        aria-label="Faire défiler vers la section suivante"
-      >
-        Scroll pour découvrir
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import '../styles/Footer.css';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,32 +8,38 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: <FaGithub />,
-      url: 'https://github.com/votrecompte',
+      url: 'https://github.com/print-cf',
       ariaLabel: 'Visiter notre GitHub'
     },
     {
       name: 'LinkedIn',
       icon: <FaLinkedin />,
-      url: 'https://linkedin.com/in/votreprofil',
+      url: 'https://www.linkedin.com/company/printcf/',
       ariaLabel: 'Nous suivre sur LinkedIn'
     },
     {
       name: 'Twitter',
       icon: <FaTwitter />,
-      url: 'https://twitter.com/votrecompte',
+      url: 'https://twitter.com/printcf',
       ariaLabel: 'Nous suivre sur Twitter'
     },
     {
       name: 'Instagram',
       icon: <FaInstagram />,
-      url: 'https://instagram.com/votrecompte',
+      url: 'https://instagram.com/printcf',
       ariaLabel: 'Nous suivre sur Instagram'
     },
     {
       name: 'Email',
       icon: <FaEnvelope />,
-      url: 'mailto:contact@votresite.com',
+      url: 'mailto:printcf8@gmail.com',
       ariaLabel: 'Nous envoyer un email'
+    },
+    {
+      name: 'Facebook',
+      icon: <FaFacebook />,
+      url: 'https://web.facebook.com/printcf/',
+      ariaLabel: 'Nous suivre sur Facebook'
     }
   ];
 
