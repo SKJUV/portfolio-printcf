@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/About.css';
+import '../styles/about.css';
 import teamMembers from '../config/team';
 
 const About = () => {
