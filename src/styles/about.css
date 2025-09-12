@@ -1,0 +1,239 @@
+:root {
+  /* Light theme (default) */
+  --bg-primary: #f9f9f9;
+  --bg-secondary: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --accent-color: #4a90e2;
+  --accent-hover: #357abd;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --accent-color: #5d9cec;
+  --accent-hover: #4a89dc;
+  --border-color: #444444;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.about-section {
+  padding: 100px 0;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: var(--text-primary);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 15px auto 0;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  background-image: url('path-to-your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.skills-section {
+  margin: 30px 0;
+}
+
+.skills-section h4 {
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-color);
+}
+
+.resume-btn:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+/* Team Grid Styles */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-member {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.member-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.member-image .image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover .image-placeholder {
+  transform: scale(1.05);
+}
+
+.member-info {
+  padding: 20px;
+}
+
+.member-info h3 {
+  color: var(--text-primary);
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+}
+
+.member-role {
+  display: block;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.member-bio {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.member-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.member-skills .skill-tag {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .member-image {
+    height: 300px;
+  }
+}

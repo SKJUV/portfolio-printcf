@@ -1,20 +1,60 @@
 import '../styles/Footer.css';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: <FaGithub />,
+      url: 'https://github.com/votrecompte',
+      ariaLabel: 'Visiter notre GitHub'
+    },
+    {
+      name: 'LinkedIn',
+      icon: <FaLinkedin />,
+      url: 'https://linkedin.com/in/votreprofil',
+      ariaLabel: 'Nous suivre sur LinkedIn'
+    },
+    {
+      name: 'Twitter',
+      icon: <FaTwitter />,
+      url: 'https://twitter.com/votrecompte',
+      ariaLabel: 'Nous suivre sur Twitter'
+    },
+    {
+      name: 'Instagram',
+      icon: <FaInstagram />,
+      url: 'https://instagram.com/votrecompte',
+      ariaLabel: 'Nous suivre sur Instagram'
+    },
+    {
+      name: 'Email',
+      icon: <FaEnvelope />,
+      url: 'mailto:contact@votresite.com',
+      ariaLabel: 'Nous envoyer un email'
+    }
+  ];
+
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>© {new Date().getFullYear()} Mon Entreprise. Tous droits réservés.</p>
+        <p>© {currentYear} PrintCF. Tous droits réservés.</p>
         <div className="social-links">
-          <a href="#" aria-label="Facebook">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href="#" aria-label="Twitter">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <i className="fab fa-linkedin"></i>
-          </a>
+          {socialLinks.map((link, index) => (
+            <a 
+              key={index}
+              href={link.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={link.ariaLabel}
+              className="social-link"
+              data-tooltip={link.name}
+            >
+              {link.icon}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

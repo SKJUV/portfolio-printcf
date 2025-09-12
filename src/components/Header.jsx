@@ -36,6 +36,7 @@ const Header = () => {
           <a href="#accueil" onClick={() => setIsOpen(false)}>Accueil</a>
           <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
           <a href="#projects" onClick={() => setIsOpen(false)}>Projets</a>
+          <a href="#about" onClick={() => setIsOpen(false)}>A propos</a>
           <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
         </nav>
         
