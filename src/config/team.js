@@ -19,11 +19,18 @@ const teamMembers = [
   {
     id: 2,
     name: 'Sineng Juvenal',
-    role: 'Designer UI/UX',
-    skills: ['Figma', 'Adobe XD', 'UI Design', 'Prototypage'],
-    bio: 'Passionné par la création d\'interfaces intuitives et esthétiques qui améliorent l\'expérience utilisateur.',
+    role: 'Développeur Full Stack & Data Science',
+    skills: [
+      'HTML/CSS/JavaScript',
+      'React + Vite',
+      'Node.js/Express.js',
+      'Python/Data Science',
+      'Machine Learning',
+      'Docker/CI-CD'
+    ],
+    bio: 'Développeur Full Stack spécialisé en développement web et data science. Expérience en création d\'applications modernes, manipulation de données et apprentissage automatique. Passionné par les technologies émergentes et les solutions innovantes.',
     image: SinengJuvenal,
-    alt: 'Photo de profil de Sineng Juvenal, Designer UI/UX'
+    alt: 'Photo de profil de Sineng Juvenal, Développeur Full Stack & Data Science'
   },
   {
     id: 3,
