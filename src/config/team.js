@@ -1,8 +1,8 @@
 // Import des images de profil
 import FreddyChoudja from '../assets/team/Freddy-Choudja.jpg';
 import SinengJuvenal from '../assets/team/Sineng-Juvenal.jpg';
-import DouanlaJimmy from '../assets/team/Douanla-Jimmy.jpg';
-import BoukalaFrank from '../assets/team/Boukala-Frank.jpg';
+import DouanlaJimmy from '../assets/team/Douanla-Jimmy.png';
+import BoukalaFrank from '../assets/team/Boukala-Frank.png';
 import MbargaWilliam from '../assets/team/Mbarga-William.jpg';
 
 // Configuration des membres de l'équipe avec leurs informations et images
