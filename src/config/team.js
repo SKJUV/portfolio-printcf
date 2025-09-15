@@ -34,12 +34,12 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: 'Douanla Jimmy',
-    role: 'Développeur Mobile',
-    skills: ['React Native', 'iOS', 'Android', 'Firebase'],
-    bio: 'Spécialiste du développement d\'applications mobiles cross-plateformes avec une attention particulière aux performances.',
+    name: 'EL SONK JIMMY',
+    role: 'Développeur Full Stack & Mobile',
+    skills: ['React Native CLI', 'Node.js/Express', 'PostgreSQL', 'Supabase', 'API Integration', 'AWS', 'Docker/Kubernetes'],
+    bio: 'Développeur Full Stack spécialisé dans les applications mobiles et web. Expérience en création de marketplaces, gestion de bases de données, et mise en place de solutions cloud. Maîtrise des bonnes pratiques de sécurité et d\'architecture logicielle.',
     image: DouanlaJimmy,
-    alt: 'Photo de profil de Douanla Jimmy, Développeur Mobile'
+    alt: 'Photo de profil de EL SONK JIMMY, Développeur Full Stack & Mobile'
   },
   {
     id: 4,
