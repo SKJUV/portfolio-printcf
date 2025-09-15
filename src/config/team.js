@@ -10,25 +10,26 @@ const teamMembers = [
   {
     id: 1,
     name: 'Freddy Choudja',
-    role: 'Développeur Full Stack',
-    skills: ['JavaScript', 'React', 'Node.js', 'MongoDB'],
-    bio: 'Expert en développement web avec une solide expérience dans la création d\'applications modernes et performantes.',
+    role: 'Expert en Marketing Digital & Graphisme',
+    skills: ['Stratégie digitale', 'Réseaux sociaux', 'SEO/SEA', 'Email Marketing', 'Publicité en ligne', 'Analyse de données', 'Adobe Creative Suite', 'Branding', 'Stratégie de contenu'],
+    bio: 'Expert en marketing digital et graphisme avec une solide expérience dans la création de campagnes digitales performantes. Spécialisé dans le développement de stratégies marketing innovantes, l\'analyse de données et la création de contenu engageant. Passionné par les dernières tendances du digital et la création d\'identités de marque fortes.',
     image: FreddyChoudja,
-    alt: 'Photo de profil de Freddy Choudja, Développeur Full Stack'
+    alt: 'Photo de profil de Freddy Choudja, Community Manager & Graphiste'
   },
   {
     id: 2,
     name: 'Sineng Juvenal',
     role: 'Développeur Full Stack & Data Science',
     skills: [
-      'HTML/CSS/JavaScript',
-      'React + Vite',
-      'Node.js/Express.js',
       'Python/Data Science',
       'Machine Learning',
-      'Docker/CI-CD'
+      'Docker/CI-CD',
+      'Sécurité des applications',
+      'OWASP Top 10',
+      'Chiffrement des données',
+      'Tests de pénétration'
     ],
-    bio: 'Développeur Full Stack spécialisé en développement web et data science. Expérience en création d\'applications modernes, manipulation de données et apprentissage automatique. Passionné par les technologies émergentes et les solutions innovantes.',
+    bio: 'Développeur Full Stack spécialisé en développement web et data science avec une expertise en cybersécurité. Expérience en création d\'applications sécurisées, analyse de vulnérabilités et mise en place de bonnes pratiques de sécurité. Passionné par les technologies émergentes et la protection des données sensibles.',
     image: SinengJuvenal,
     alt: 'Photo de profil de Sineng Juvenal, Développeur Full Stack & Data Science'
   },
@@ -44,20 +45,20 @@ const teamMembers = [
   {
     id: 4,
     name: 'Boukala Frank',
-    role: 'Développeur Frontend',
-    skills: ['Vue.js', 'TypeScript', 'Sass', 'Jest'],
-    bio: 'Développeur frontend passionné par la création d\'interfaces utilisateur réactives et accessibles.',
+    role: 'Designer UI/UX Senior & Sécurité',
+    skills: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator', 'Design System', 'Prototypage', 'User Research', 'Sécurité des interfaces', 'RGPD', 'Accessibilité Web (WCAG)'],
+    bio: 'Designer UI/UX expérimenté avec une expertise en sécurité des interfaces et protection des données. Spécialisé dans la création d\'interfaces à la fois élégantes et sécurisées, en conformité avec les normes RGPD et d\'accessibilité. Expert en conception centrée utilisateur et en évaluation des risques liés à l\'expérience utilisateur.',
     image: BoukalaFrank,
-    alt: 'Photo de profil de Boukala Frank, Développeur Frontend'
+    alt: 'Photo de profil de Boukala Frank, Designer UI/UX Senior'
   },
   {
     id: 5,
     name: 'Mbarga William',
-    role: 'DevOps Engineer',
-    skills: ['Docker', 'AWS', 'CI/CD', 'Terraform'],
-    bio: 'Expert en déploiement et infrastructure cloud, avec une solide expérience dans l\'automatisation des processus de développement.',
+    role: 'Développeur Full Stack',
+    skills: ['JavaScript/TypeScript', 'React/Next.js', 'Node.js/NestJS', 'PostgreSQL/MongoDB', 'Docker', 'AWS', 'CI/CD', 'API GraphQL'],
+    bio: 'Développeur Full Stack expérimenté avec une expertise dans la conception et le déploiement d\'applications web et mobiles évolutives. Passionné par les architectures microservices, les bonnes pratiques de développement et l\'optimisation des performances. Toujours à l\'affût des dernières technologies pour fournir des solutions innovantes et robustes.',
     image: MbargaWilliam,
-    alt: 'Photo de profil de Mbarga William, DevOps Engineer'
+    alt: 'Photo de profil de Mbarga William, Développeur Full Stack'
   }
 ];
 
